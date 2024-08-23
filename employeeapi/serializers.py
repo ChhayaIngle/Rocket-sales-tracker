@@ -43,8 +43,8 @@ class attenSerializer(serializers.ModelSerializer):
         fields = (
             'ID',              
             'employee_name',       # Employee's name
-            'mobile_number',       # Employee's mobile number
-            'role',       # Employee's role
+            'mobile_no',       # Employee's mobile number
+            'employee_role',       # Employee's role
             'gender',              # Employee's gender
             'date',                # Date of attendance
             'attendance_status',  # Status of attendance
@@ -57,8 +57,8 @@ class MarkManualAttendanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = MarkManualAttendance
         fields = (
-            'ID',                 # Primary key (ID) of the attendance record
             'employee_name',      # Employee's name
+            'ID',                 # Primary key (ID) of the attendance record
             'date',               # Date of attendance
             'attendance_status', # Status of attendance (e.g., Present, Absent)
             'location',           # Location of the employee
@@ -102,7 +102,6 @@ class OrderInvoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderInvoice
         fields = [
-          
             'employee_name',
             'ID',
             'customer_name',
