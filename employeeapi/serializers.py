@@ -17,7 +17,9 @@ class TaskSerializer(serializers.ModelSerializer):
             'role',           # Status of the task
             'start_date',       # Task start date
             'deadline',         # Task deadline
-            'completion_date',  # The date when the task was completed
+            'completion_date',
+            'task_name',
+            'location', # The date when the task was completed
             'task_status', # Description of the task (optional)
         )
         
