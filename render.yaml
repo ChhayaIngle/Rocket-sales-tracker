@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sales_tracker  # Replace with your service name
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python manage.py runserver 127.0.0.1:8000
+    pythonVersion: "3.12.5"  # Specify the Python version you want to use
+    # Optionally specify the port if needed
+    # port: 10000
